@@ -1,0 +1,38 @@
+/*Sign Up Page Styling*/
+#signup-form {
+        padding: 0;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        margin: 0;
+        line-height: 1.6;
+}
+
+.form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e9f7fa;
+}
+
+.col-md-6 {
+        background: aliceblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 100%;
+}
+
+.form-control, .form-select {
+        height: 45px;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 10px;
+}
+
+.btn {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 6px;
+        width: 100%;
+}

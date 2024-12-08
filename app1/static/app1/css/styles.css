@@ -4,10 +4,41 @@ body {
         margin: 0;
         padding: 0;
         line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
 }
 
 main {
         padding: 0;
+        height: 120vh;
+        flex: 1;
+}
+
+.notification-container {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1050;
+        border-radius: 10px;
+        background-color: aliceblue;
+}
+
+.alert {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1050;
+        width: 75%;
+        max-width: 100%;
+        margin: 0 3px;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out
 }
 
 /* Carousel Section */
@@ -155,6 +186,7 @@ main {
 .btn-primary:hover {
         background: #5a3780;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

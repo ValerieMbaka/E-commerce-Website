@@ -23,6 +23,17 @@
 </head>
 <body>
 
+        <!-- Notifications -->
+        {% if messages %}
+                <div id="notification" class="notification-container">
+                        {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                        {{ message }}
+                                </div>
+                        {% endfor %}
+                </div>
+        {% endif %}
+
         <!-- Navbar -->
         <nav class="navbar sticky-top navbar-expand-lg">
                 <div class="container-fluid">
@@ -71,10 +82,10 @@
                                         </li>
 
                                         <li class="nav-item">
-                                                <a class="nav-link" href=""> Login </a>
+                                                <a class="nav-link" href="{% url 'users:login' %}"> Login </a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href=""> Sign Up </a>
+                                                <a class="nav-link" href="{% url 'users:signup' %}"> Sign Up </a>
                                         </li>
 
                                 </ul>
@@ -94,7 +105,7 @@
 
 
         <!-- Footer -->
-        <footer id="footer" class="footer text-center mt-4 text-lg-start ">
+        <footer id="footer" class="footer text-center mt-4 text-lg-start site-footer">
                 <div class="container p-4">
                         <div class="row">
                                 <!-- About Section -->
@@ -151,8 +162,53 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs/dist/cropper.min.css">
         <script src="https://cdn.jsdelivr.net/npm/cropperjs/dist/cropper.min.js"></script>
 
+        <!-- Connect to Firebase -->
+        <!-- Add Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+        <script>
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from "firebase/app";
+                import { getAnalytics } from "firebase/analytics";
+                // TODO: Add SDKs for Firebase products that you want to use
+                // https://firebase.google.com/docs/web/setup#available-libraries
+
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                const firebaseConfig = {
+                        apiKey: "AIzaSyCGUC9u38j5Oj9YlarABz8aicybX39wyCQ",
+                        authDomain: "web-development-fe6af.firebaseapp.com",
+                        projectId: "web-development-fe6af",
+                        storageBucket: "web-development-fe6af.firebasestorage.app",
+                        messagingSenderId: "647043206129",
+                        appId: "1:647043206129:web:20a576cc3fcf153edc1250",
+                        measurementId: "G-T6WK95P2BY"
+                };
+
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const analytics = getAnalytics(app);
+        </script>
+
         <!-- Connect to Main JS File -->
         <script src="{% static 'app1/js/scripts.js' %}"></script>
+
+        <!-- Fade out notifications -->
+        <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        setTimeout(function () {
+                                const notifications = document.querySelectorAll('#notification .alert');
+                                notifications.forEach(function (notification) {
+                                        notification.style.opacity = '0'; // Start fading out
+                                        setTimeout(function () {
+                                                notification.style.display = 'none'; // Completely hide after fade
+                                        }, 1000); // Wait for fade-out to complete
+                                });
+                        }, 5000); // 5 seconds before starting fade-out
+                });
+        </script>
+
 
 
         {% block extra_scripts %}{% endblock %}
