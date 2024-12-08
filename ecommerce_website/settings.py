@@ -42,6 +42,7 @@ INSTALLED_APPS = [
         # My apps
         'app1',
         'users',
+        'products',
         
 ]
 
@@ -104,6 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
                 'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
         },
 ]
+
+
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4be0eeae-772e-453c-b8e0-7722e0c0ed5e" name="Changes" comment="Added user authentication">
+      <change afterPath="$PROJECT_DIR$/products/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/static/products/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/templates/products/product_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/templates/products/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/templates/products/upload_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/static/app1/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app1/static/app1/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/static/app1/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app1/static/app1/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/app1/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/app1/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce_website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="package.json" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -44,24 +64,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/user/OneDrive/Desktop/Web Development/Django/ecommerce_website/app1/static/app1/images",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Users\\user\\AppData\\Local\\Programs\\PyCharm Professional\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/OneDrive/Desktop/Web Development/Django/ecommerce_website/app1/static/app1/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\user\\AppData\\Local\\Programs\\PyCharm Professional\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\OneDrive\Desktop\Web Development\Django\ecommerce_website\app1\static\app1\images" />
@@ -118,7 +138,7 @@
       <workItem from="1733604495885" duration="9999000" />
       <workItem from="1733639215192" duration="66000" />
       <workItem from="1733639487472" duration="1003000" />
-      <workItem from="1733640525639" duration="17018000" />
+      <workItem from="1733640525639" duration="32567000" />
     </task>
     <task id="LOCAL-00001" summary="Added home page">
       <option name="closed" value="true" />
@@ -152,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733665133476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added user authentication">
+      <option name="closed" value="true" />
+      <created>1733665921440</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733665921440</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

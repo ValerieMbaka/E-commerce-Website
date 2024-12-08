@@ -1,4 +1,3 @@
-from django.core import mail
 from django.shortcuts import render, redirect
 from .models import FirebaseUser
 from firebase_admin.exceptions import FirebaseError
@@ -6,6 +5,7 @@ from django.contrib import messages
 from firebase_admin import auth
 import firebase_admin
 from firebase_admin import credentials
+from django.contrib.auth.decorators import login_required
 
 # Initialize Firebase Admin SDK
 cred = credentials.Certificate(
@@ -64,7 +64,11 @@ def signup_view(request):
 
                 # Success message
                 messages.success(request, "Account created successfully!")
-                return redirect('users:login')
+                # Redirect based on role
+                if role == 'buyer':
+                        return redirect('products:view_products')  # Redirect buyer to the products page
+                else:
+                        return redirect('products:upload_product')
 
         return render(request, 'users/signup.html')
 
@@ -79,8 +83,21 @@ def login_view(request):
                         if verify_firebase_password(email, password):  # Custom helper function (mock)
                                 request.session['firebase_uid'] = user.uid
                                 messages.success(request, "Login successful.")
-                                #next_url = request.GET.get('next', 'users:dashboard')
-                                return redirect('app1:index')
+                                # Retrieve user's role from FirebaseUser model
+                                try:
+                                        firebase_user = FirebaseUser.objects.get(uid=user.uid)
+                                        role = firebase_user.role
+                                        
+                                        # Redirect based on role
+                                        if role == 'buyer':
+                                                return redirect('products:view_products')  # Redirect buyer to products page
+                                        else:
+                                                return redirect('products:upload_product')  # Redirect seller to product upload page
+                                
+                                except FirebaseUser.DoesNotExist:
+                                        messages.error(request, "User role not found.")
+                                        return redirect('users:login')
+                                
                         else:
                                 messages.error(request, "Invalid credentials.")
                                 return render(request, 'users/login.html')
@@ -93,6 +110,16 @@ def login_view(request):
 def verify_firebase_password(email, password):
         # Use Firebase client-side SDK for real verification (mocking here for backend demo)
         return password == password  # Replace with actual verification in production
+
+@login_required
+def dashboard(request):
+        try:
+                # Ensure we are working with an authenticated Firebase user
+                user = FirebaseUser.objects.get(uid=request.user.uid)
+        except FirebaseUser.DoesNotExist:
+                user = None  # Handle if the Firebase user is not found
+
+        return render(request, 'users/dashboard.html', {'user': user})
 
 
 

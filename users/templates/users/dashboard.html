@@ -1,0 +1,63 @@
+{% extends 'app1/layout.html' %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block extra_head %}
+        <link rel="stylesheet" href="{% static 'app1/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'users/css/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+        <div class="container">
+                <div class="row mt-4">
+                        <!-- Sidebar -->
+                        <div class="col-md-3">
+                                <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action active"> Dashboard </a>
+                                        <a href="" class="list-group-item list-group-item-action"> Profile Settings </a>
+                                        {% if user.role == 'seller' %}
+                                                <a href="" class="list-group-item list-group-item-action"> Manage Products </a>
+                                        {% else %}
+                                                <a href="" class="list-group-item list-group-item-action"> Recent Orders </a>
+                                        {% endif %}
+                                                <a href="" class="list-group-item list-group-item-action"> Logout </a>
+                                </div>
+                        </div>
+
+                        <!-- Main Content -->
+                        <div class="col-md-9">
+                                <div class="card">
+                                        <div class="card-body">
+                                                <h3 class="card-title"> Welcome, {{ user.full_name }} </h3>
+                                                <p class="card-text"> Your current role: {{ user.role }} </p>
+                                                <hr>
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                                                <h5>Profile Information</h5>
+{#                                                                <img src="" alt="Profile Picture" class="img-thumbnail" width="150">#}
+                                                                <p> Email: {{ user.email }} </p>
+                                                                <p> Joined: {{ user.created_at|date:"F j, Y" }} </p>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                                {% if user.role == 'seller' %}
+                                                                        <h5> Seller Stats </h5>
+                                                                        <p> Products Uploaded: {{ user.products.count }} </p>
+                                                                        <p> Total Sales: ${{ user.sales }} </p>
+                                                                {% else %}
+                                                                        <h5>Recent Orders</h5>
+                                                                        <ul>
+                                                                                {% for order in user.orders.all %}
+                                                                                        <li>Order #{{ order.id }} - Status: {{ order.status }}</li>
+                                                                                {% endfor %}
+                                                                        </ul>
+                                                                {% endif %}
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+{% endblock %}
