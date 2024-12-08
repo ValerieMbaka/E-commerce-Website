@@ -18,10 +18,9 @@
 
 {% block body %}
 
-        <main>
-                <!-- Carousel Section-->
-                <section id="carousel-section">
-                        <div id="homeCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <!-- Carousel Section-->
+        <section id="carousel-section">
+                        <div id="homeCarousel" class="carousel slide mb-0" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                         {% for slider in sliders %}
                                                 <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="{{ forloop.counter0 }}"
@@ -50,8 +49,8 @@
                         </div>
                 </section>
 
-                <!-- About Section -->
-                <section id="about" class="about-section py-5">
+        <!-- About Section -->
+        <section id="about" class="about-section py-5">
                         <div class="container text-center">
                                 {% if about_section %}
                                         <div class="about-content">
@@ -65,8 +64,8 @@
                         </div>
                 </section>
 
-                <!-- Services Section -->
-                <section id="services"  class="services py-5">
+        <!-- Services Section -->
+        <section id="services"  class="services py-5">
                         <div class="container">
                                 <h2 class="text-center mb-5"> Our Products </h2>
                                 <div class="row">
@@ -86,8 +85,8 @@
                         </div>
                 </section>
 
-                <!-- Testimonials Section -->
-                <section id="testimonials" class="testimonials py-5">
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials py-5">
                         <div class="container">
                                 <h2 class="text-center mb-5">What Our Customers Say</h2>
                                 <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -152,8 +151,6 @@
                                 </div>
                         </div>
                 </section>
-
-        </main>
 
 
 {% endblock %}

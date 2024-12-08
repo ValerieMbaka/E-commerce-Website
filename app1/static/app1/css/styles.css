@@ -7,6 +7,7 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100%;
+        background: linear-gradient(to right, #667eea, rgba(17, 176, 255, 0.81));
 }
 
 main {
@@ -15,30 +16,59 @@ main {
         flex: 1;
 }
 
-.notification-container {
+#notification .notification-container {
         position: fixed;
-        top: 20px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         z-index: 1050;
         border-radius: 10px;
-        background-color: aliceblue;
+        background-color: #f8f9fa;
+        max-width: 80%;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.alert {
-        position: fixed;
+#notification .alert {
+        position: relative;
+        display: inline-block;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1050;
         width: 75%;
         max-width: 100%;
-        margin: 0 3px;
+        margin: 10px auto;
         padding: 15px;
-        border-radius: 5px;
+        border-radius: 8px;
         font-size: 16px;
+        font-weight: bold;
         opacity: 1;
-        transition: opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        background-color: #d1ecf1;
+        color: #0c5460;
+}
+
+#notification .alert.alert-success {
+        background-color: #d4edda;
+        color: #155724;
+}
+
+#notification .alert.alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+}
+
+#notification .alert.alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+}
+
+#notification .alert.alert-info {
+        background-color: #d1ecf1; /
+        color: #0c5460;
 }
 
 /* Carousel Section */
@@ -187,6 +217,133 @@ main {
         background: #5a3780;
 }
 
+/* Footer Styling */
+#footer {
+        background: linear-gradient(to right, #667eea, rgba(17, 176, 255, 0.81));
+        padding: 40px 0;
+        font-family: 'Arial', sans-serif;
+        position: static;
+}
+
+.footer .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+}
+
+/* Footer Row Flexbox */
+.footer .row {
+        display: flex; /* Activate flexbox for equal height columns */
+        flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+        justify-content: space-between;
+}
+
+/* Footer Columns */
+.footer .col-lg-4, .footer .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Adjust to align the content from top */
+        margin-bottom: 30px;
+        padding: 0 15px;
+        flex: 1;
+}
+
+.footer .footer-content, .footer .footer-contact {
+        background: rgba(17, 176, 255, 0.81);
+        padding: 15px;
+        box-shadow: none;
+        border: none;
+        margin-right: 20px;
+}
+
+/* About Us Section */
+.footer .footer-content h5 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding: 5px;
+}
+
+.footer .footer-content p {
+        font-size: 14px;
+        color: #101010;
+        margin-top: 5px;
+}
+
+/* Quick Links Section */
+.footer .footer-content ul {
+        list-style-type: none;
+        padding: 0;
+}
+
+.footer .footer-content ul li {
+        margin-bottom: 8px;
+}
+
+.footer .footer-content ul li a {
+        color: #101010;
+        text-decoration: none;
+        font-size: 14px;
+}
+
+.footer .footer-content ul li a:hover {
+        text-decoration: underline;
+        color: black;
+}
+
+/* Contact Section */
+.footer .footer-contact h5 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+}
+
+.footer .footer-contact ul {
+        list-style-type: none;
+        padding: 0;
+}
+
+.footer .footer-contact ul li {
+        font-size: 14px;
+        color: #101010;
+        margin-bottom: 8px;
+}
+
+.footer .footer-contact ul li i {
+        margin-right: 8px;
+}
+
+/* Social Media Icons */
+.footer .footer-contact .mt-3 a {
+        color: #007bff;
+        margin-right: 15px;
+        font-size: 20px;
+        transition: color 0.3s ease;
+}
+
+.footer .footer-contact .mt-3 a:hover {
+        color: #0056b3;
+}
+
+/* Footer Copyright Section */
+#footer .text-center {
+        background: linear-gradient(to right, #667eea, rgba(17, 176, 255, 0.81));
+        padding: 15px 0;
+        font-size: 14px;
+}
+
+#footer .text-center a {
+        color: #101010;
+        text-decoration: none;
+}
+
+#footer .text-center a:hover {
+        text-decoration: underline;
+}
+
+.copyright-text{
+        color: black;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

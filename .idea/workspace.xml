@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4be0eeae-772e-453c-b8e0-7722e0c0ed5e" name="Changes" comment="Added user authentication" />
+    <list default="true" id="4be0eeae-772e-453c-b8e0-7722e0c0ed5e" name="Changes" comment="Added user authentication">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/static/app1/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app1/static/app1/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/static/app1/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app1/static/app1/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/app1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/app1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/app1/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/app1/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/static/users/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +124,7 @@
       <workItem from="1733604495885" duration="9999000" />
       <workItem from="1733639215192" duration="66000" />
       <workItem from="1733639487472" duration="1003000" />
-      <workItem from="1733640525639" duration="9856000" />
+      <workItem from="1733640525639" duration="16476000" />
     </task>
     <task id="LOCAL-00001" summary="Added home page">
       <option name="closed" value="true" />
@@ -134,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733650826045</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added user authentication">
+      <option name="closed" value="true" />
+      <created>1733651265080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733651265080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
